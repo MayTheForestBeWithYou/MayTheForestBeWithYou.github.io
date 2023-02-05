@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Nav menu */
+@import
+url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.nav-menu {
+    background-color: #272727;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+    text-align: center;
+    padding: 1em;
+}
+.nav-menu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 1em 0 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    /* float: left; */
+    display: inline-block;
+    text-align: center;
+}
+.nav-menu a:hover {
+    color: #fddb3a;
+}
+.nav-menu .dot {
+    display: flex;
+    align-items: center;
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nav-menu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(33em);
+    transform: translateX(33em);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+.nav-menu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(12em);
+    transform: translateX(12em);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+.nav-menu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+.nav-menu a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(285px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+.nav-menu a:nth-child(5):hover ~ .dot {
+    -webkit-transform: translateX(365px);
+    transform: translateX(365px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+.nav-menu a:nth-child(6):hover ~ .dot {
+    -webkit-transform: translateX(445px);
+    transform: translateX(445px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+/* Header section */
+header {
+    width: 100vw;
+    height: 92vh;
+    background: linear-gradient(
+        to right,
+        rgba(0, 255, 21, 0.438),
+        rgba(90, 100, 66, 0.6)
+    ), 
+    url(../assets/lettuce_glasshouse_background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 80%,
+        50% 100%,
+        0 80%
+    );
+    position: relative;
+}
+header .text-container {
+    display: block;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
