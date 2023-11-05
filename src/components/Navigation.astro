@@ -1,0 +1,16 @@
+---
+let menuItems = ['About', 'Skills', 'Projects'];
+---
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {
+            menuItems.map((menuItem) => (
+                <li>
+                    <a href={`/${menuItem}`}>{menuItem}</a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
