@@ -3,19 +3,61 @@ let menuItems = ['about', 'skills', 'projects'];
 ---
 
 <nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        {
-            menuItems.map((menuItem) => (
-                <li>
-                    <a href={`/${menuItem}`}>{menuItem}</a>
-                </li>
-            ))
-        }
-    </ul>
+    <div class="navbar-logo">
+        <a href="/">Timon van Leeuwen</a>
+    </div>
+    <div class="navbar-items">
+        <ul>
+            {
+                menuItems.map((menuItem) => (
+                    <li>
+                        <a href={`/${menuItem}`}>{menuItem}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
 </nav>
 <style>
-    a {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem 4rem;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    li {
+        list-style: none;
+        padding: 0rem 2rem;
+    }
+    .navbar-logo a {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2e3755;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: solid 3px transparent;
+    }
+    .navbar-logo a:hover {
+        color: #ec2e57;
+        border-bottom: solid 3px #ec2e57;
+        transition: all 0.25s ease-in-out;
+    }
+    .navbar-items a {
         text-transform: capitalize;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1aabac;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: solid 3px transparent;
+    }
+    .navbar-items a:hover {
+        color: #ec2e57;
+        border-bottom: solid 3px #ec2e57;
+        transition: all 0.25s ease-in-out;
     }
 </style>
