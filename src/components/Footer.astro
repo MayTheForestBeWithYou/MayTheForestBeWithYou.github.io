@@ -1,16 +1,50 @@
 ---
-import Social from '@components/Social.astro';
+
 ---
 
 <style>
     footer {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 2rem;
+        margin-right: 5rem;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .social-button {
+        color: black;
+        padding: 12px 12px 12px 34px;
+        font-size: 16px;
+        cursor: pointer;
+        border: solid 1px black;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    .social-button-github {
+        background-image: url('src/images/github.svg');
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center left 4px;
+    }
+    .social-button-linkedin {
+        background-image: url('src/images/linkedin.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center left 4px;
     }
 </style>
 
 <footer>
-    <Social platform="github" username="MayTheForestBeWithYou" />
-    <Social platform="linkedin" username="in/timon-van-leeuwen" />
+    <!-- <Social platform="github" username="MayTheForestBeWithYou" image=githubImage/>
+    <Social platform="linkedin" username="in/timon-van-leeuwen" image=linkedinImage/> -->
+    <a
+        class="social-button social-button-github"
+        href="https://www.github.com/MayTheForestBeWithYou"
+        target="_blank">github</a
+    >
+    <a
+        class="social-button social-button-linkedin"
+        href="https://www.linedin.com/in/timon-van-leeuwen"
+        target="_blank">linkedin</a
+    >
 </footer>
