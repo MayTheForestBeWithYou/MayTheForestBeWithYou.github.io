@@ -1,5 +1,5 @@
 ---
-
+import { socials } from '@components/socials';
 ---
 
 <style>
@@ -12,39 +12,50 @@
         justify-content: flex-end;
     }
     .social-button {
-        color: black;
-        padding: 12px 12px 12px 34px;
+        display: flex;
+        align-items: center;
+        color: var(--primary-color);
+        padding: 2px 8px;
         font-size: 16px;
         cursor: pointer;
-        border: solid 1px black;
+        border: solid 1px var(--primary-color);
         border-radius: 20px;
         text-decoration: none;
     }
-    .social-button-github {
-        background-image: url('src/images/github.svg');
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: center left 4px;
+    .social-img {
+        height: 24px;
+        width: 24px;
+        padding-right: 4px;
+        filter: invert(51%) sepia(45%) saturate(411%) hue-rotate(54deg)
+            brightness(98%) contrast(94%);
     }
-    .social-button-linkedin {
-        background-image: url('src/images/linkedin.svg');
-        background-repeat: no-repeat;
-        background-size: 30px;
-        background-position: center left 4px;
+    .social-button p {
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+    }
+    .social-button:hover {
+        color: white;
+        background-color: var(--accent-color);
+        transition: all 0.25s ease-in-out;
+    }
+    .social-button:hover img {
+        filter: invert(93%) sepia(7%) saturate(28%) hue-rotate(320deg)
+            brightness(107%) contrast(106%);
+        transition: all 0.25s ease-in-out;
     }
 </style>
 
 <footer>
-    <!-- <Social platform="github" username="MayTheForestBeWithYou" image=githubImage/>
-    <Social platform="linkedin" username="in/timon-van-leeuwen" image=linkedinImage/> -->
-    <a
-        class="social-button social-button-github"
-        href="https://www.github.com/MayTheForestBeWithYou"
-        target="_blank">github</a
-    >
-    <a
-        class="social-button social-button-linkedin"
-        href="https://www.linedin.com/in/timon-van-leeuwen"
-        target="_blank">linkedin</a
-    >
+    {
+        socials.map((social) => (
+            <a class="social-button" href={`${social.site}`} target="_blank">
+                <img
+                    class="social-img"
+                    src={`src/images/${social.platform}.svg`}
+                    alt={`${social.platform}`}
+                />
+                <p>{`${social.platform}`}</p>
+            </a>
+        ))
+    }
 </footer>
