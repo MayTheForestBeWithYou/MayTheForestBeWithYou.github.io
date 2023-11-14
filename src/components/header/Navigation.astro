@@ -1,10 +1,13 @@
 ---
 let menuItems = ['about', 'skills', 'projects'];
+import svgIcon from '@images/logo.svg';
 ---
 
 <nav>
     <div class="navbar-logo">
-        <a href="/">Timon van Leeuwen</a>
+        <a href="/">
+            <img src={svgIcon.src} alt="Logo"/>
+        </a>
     </div>
     <div class="navbar-items">
         <ul>
@@ -23,7 +26,7 @@ let menuItems = ['about', 'skills', 'projects'];
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0rem 4rem;
+        margin: 0rem 10rem;
     }
     ul {
         display: flex;
@@ -33,24 +36,14 @@ let menuItems = ['about', 'skills', 'projects'];
         list-style: none;
         padding: 0rem 2rem;
     }
-    .navbar-logo a {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        text-decoration: none;
-        padding-bottom: 2px;
-        border-bottom: solid 3px transparent;
-    }
-    .navbar-logo a:hover {
-        color: var(--accent-color);
-        border-bottom: solid 3px var(--accent-color);
-        transition: all 0.25s ease-in-out;
+    .navbar-logo img {
+        height: 80px;
     }
     .navbar-items a {
         text-transform: capitalize;
         font-size: 1.25rem;
         font-weight: 700;
-        color: var(--primary-color);
+        color: var(--primary-dark-color);
         text-decoration: none;
         padding-bottom: 2px;
         border-bottom: solid 3px transparent;
